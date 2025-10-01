@@ -1,14 +1,30 @@
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
-  tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
-      links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+  title: Amazon S3 storage documentation
+  lead: Get started using Amazon S3 storage with NetApp Console.
+  summary: Get started using Amazon S3 storage with NetApp Console.
+  keywords: amazon s3, storage, bluexp, netapp console
+  tiles:
+    - title: Get started
+      links:
+        - title: View your Amazon S3 buckets
+          url: task-viewing-amazon-s3.html
+    - title: Manage S3 buckets
+      links:
+        - title: Add S3 buckets
+          url: task-add-s3-bucket.html
+        - title: Change bucket settings
+          url: task-change-s3-bucket-settings.html
+        - title: Use NetApp data services with S3 buckets
+          url: task-s3-enable-data-services.html
+    - title: More information
+      links:
+        - title: Amazon S3 documentation for management outside of the NetApp Console
+          url: https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community
+          url: https://community.netapp.com/

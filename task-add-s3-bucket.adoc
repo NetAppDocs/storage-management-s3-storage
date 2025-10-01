@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: task-add-s3-bucket.html
+keywords: s3 buckets, s3 storage, s3 working environment, s3 system, amazon s3 buckets, amazon s3 working environment, amazon s3 system
+summary: When your Amazon S3 system is available in the Systems page, you can add additional buckets directly from the NetApp Console.
+---
+
+= Add S3 buckets
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When your Amazon S3 system is available in the _Systems_ page, you can add additional buckets directly from the NetApp Console.
+
+.Steps
+
+. From the _Systems_ page, double-click the Amazon S3 system to view the _Amazon S3 buckets Overview_ page, and click *Add bucket*.
++
+The _Add bucket_ page is displayed.
+
+. In the _Add bucket_ page, enter the required information to create the bucket and click *Apply*.
++
+.. Enter the name you want to use for the bucket.
+.. Select the AWS account that will be the owner of the bucket. This can be the primary account where the Console agent was deployed, or it can be a https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#add-credentials-to-a-connector[different account that you have added to the NetApp Console^].
+.. Select the AWS region where the bucket will be created.
+.. Optionally, you can enable S3 object locking on the bucket to store objects using a write-once-read-many (WORM) model. If you plan to use object locking, you must enable it when creating the bucket. Enabling Object Lock also enables Versioning. https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html[Learn more about object locking from the Amazon S3 documentation^].
++
+The bucket is created.
+
+.What's next
+
+You can't manually configure Versioning, Tags, or Encryption when initially adding a bucket. After the bucket is created you can configure these other properties of the bucket. link:task-change-s3-bucket-settings.html[Learn more about changing bucket settings].
+
