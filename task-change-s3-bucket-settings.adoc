@@ -1,0 +1,64 @@
+---
+sidebar: sidebar
+permalink: task-change-s3-bucket-settings.html
+keywords: s3 buckets, s3 storage, s3 working environment, amazon s3 buckets, amazon s3 working environment
+summary: When your Amazon S3 system is available in the Systems page, you can change some bucket properties directly from the NetApp Console.
+---
+
+= Change S3 bucket settings
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When your Amazon S3 system is available in the Systems page, you can change some bucket properties directly from the NetApp Console.
+
+Note that you can't change the bucket name, AWS account, region, or object lock setting.
+
+The bucket properties you can change include:
+
+* Whether Versioning is enabled or disabled for all objects in the bucket.
+* You can choose to apply tags to the objects that are added to the bucket.
+* Whether or not new objects added to the bucket are Encrypted, and the option used for encryption.
+
+You can change these bucket settings directly by clicking image:button-horizontal-more.gif[the three dots more button] for a bucket.
+
+image:screenshot-edit-amazon-s3-bucket.png[A screenshot showing how to select the Manager Details button to edit bucket properties.]
+
+== Change the versioning setting
+
+Versioning enables you to keep multiple versions of an object in a bucket so that you can restore objects that are accidentally deleted or overwritten. You can change the versioning setting for future objects when they are added to the bucket. Changing the versioning setting does not change the value for existing objects.
+
+Versioning is disabled by default in new buckets, unless you enabled Object Lock when you created the bucket. https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html[Learn more about versioning from the Amazon S3 documentation^].
+
+When enabled, if you want to stop versioning temporarily or permanently, you can choose the "Suspended" state. You can't disable versioning after it has been enabled.
+
+image:screenshot-amazon-s3-versioning.png[A screenshot showing how to change the versioning setting for a bucket.]
+
+== Add or change tags for objects in the bucket
+
+Tags are metadata that you can use to group resources to identify applications, environments, regions, cloud providers, and more. Tags consists of a tag key and a tag value. You can add tags to a bucket so that the tags are applied to objects when they are added to the bucket. You can also change and delete tags and tag values.
+
+Tags are disabled by default in new buckets created by the NetApp Console. https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html[Learn more about tagging from the Amazon S3 documentation^].
+
+image:screenshot-amazon-s3-tags.png["A screenshot showing how to add a new tag key/value pair for a bucket."]
+
+After you add a tag, click *Apply* to save your changes. If you want to add more tags, click *Add new tag*. You can add up to 10 tags per bucket.
+
+== Change the encryption setting
+
+Server-side encryption enables you to encrypt data at the Amazon S3 destination. Amazon S3 encrypts your data at the object level as it writes it to disk, and it decrypts it for you when you access it. You can change the encryption setting used for future objects when they are added to the bucket.
+
+Encryption is enabled by default using "Amazon S3 managed keys (SSE-S3)" in new buckets created by the NetApp Console. https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html[Learn more about server-side encryption from the Amazon S3 documentation^].
+
+Alternatively, you can choose to enable encryption using the "AWS Key Management Service key (SSE-KMS)". Encryption is also possible using your own customer-provided keys (SSE-C), but this functionality is unavailable through the Console UI - you must use the Amazon interface.
+
+image:screenshot-amazon-s3-encryption1.png[A screenshot showing how to change the encryption key type used for a bucket.]
+
+If you choose "AWS Key Management Service key (SSE-KMS)", you can choose an AWS KMS key that you've already created, or you can use an AWS KMS key ARN (Amazon Resource Name). 
+
+image:screenshot-amazon-s3-encryption2.png[A screenshot showing how to select alternate encryption settings for a bucket.]
+
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html[Learn more about the AWS Key Management Service from the Amazon S3 documentation^] and about https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-mgmt[using customer keys versus AWS keys^].
