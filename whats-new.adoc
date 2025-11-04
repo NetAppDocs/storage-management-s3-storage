@@ -15,15 +15,15 @@ summary: Learn what's new in Amazon S3 storage in NetApp Console.
 [.lead]
 Learn what's new in Amazon S3 storage in NetApp Console.
 
-// tag::whats-new[]
+
 == 06 October 2025
 
 include::_whatsnew/2025-10-06.adoc[]
-// end::whats-new[]
 
-// tag::whats-new[]
+
+
 == 05 March 2023
 
 include::_whatsnew/2023-03-05.adoc[]
-// end::whats-new[]
+
 
