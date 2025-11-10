@@ -39,4 +39,4 @@ https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html[Le
 +
 To get started, select your Amazon S3 system and select the appropriate option from the *Classification* section of the Services panel to initiate scanning of your S3 buckets.
 +
-https://docs.netapp.com/us-en/data-services-classification/task-scanning-s3.html[Learn more about the NetApp Data Classification service^].
+https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-s3.html[Learn more about the NetApp Data Classification service^].
